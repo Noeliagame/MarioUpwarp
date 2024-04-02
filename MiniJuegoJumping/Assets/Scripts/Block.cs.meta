@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:MiniJuegoJumping/Assets/Scripts/Block.cs.meta
+guid: 60e71185bd24f944ca30c6cc9f3429b6
+========
+guid: ce14a2507e8423f4b829d4396432b64e
+>>>>>>>> 421e736aa9c8c21f78aad5e40ceffed15f9ed39a:MiniJuegoJumping/Assets/Scripts/PlatformController.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
