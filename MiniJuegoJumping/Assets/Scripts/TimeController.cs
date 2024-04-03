@@ -1,13 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
 public class TimeController : MonoBehaviour
 {
     [SerializeField] int min, seg;
-    [SerializeField] TextMeshProUGUI time;
+    [SerializeField] TextMeshProUGUI timeText;
+    [SerializeField] TextMeshProUGUI messageText;
+
+    [SerializeField] Transform endPoint;
+    [SerializeField] string winMessage = "¡Felicidades, has ganado!";
+    [SerializeField] string loseMessage = "¡Has perdido!";
 
     private float remaining;
     private bool timing;
@@ -21,18 +29,43 @@ public class TimeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(timing)
+        if (timing)
         {
             remaining -= Time.deltaTime;
-            if(remaining < 1)
+
+            if (remaining <= 0)
             {
-                timing = true;
-                //Dead of the character
-                
+                timing = false;
+                ShowMessage(loseMessage);
             }
-            int tempMin = Mathf.FloorToInt(remaining / 60);
-            int tempSeg = Mathf.FloorToInt(remaining % 60);
-            time.text = string.Format("{00:00}:{01:00}", tempMin, tempSeg);
+            else
+            {
+                int tempMin = Mathf.FloorToInt(remaining / 60);
+                int tempSeg = Mathf.FloorToInt(remaining % 60);
+                timeText.text = string.Format("{00:00}:{01:00}", tempMin, tempSeg);
+            }
+        }
+    }
+
+    void ShowMessage(string message)
+    {
+        messageText.text = message;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.transform == endPoint)
+        {
+            timing = false;
+            ShowMessage(winMessage);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.transform == endPoint)
+        {
+            timing = true;
         }
     }
 }
