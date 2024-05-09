@@ -14,7 +14,7 @@ public class TimeController : MonoBehaviour
     [SerializeField] TextMeshProUGUI messageText;
 
     [SerializeField] Transform endPoint;
-    [SerializeField] string winMessage = "¡Felicidades, has ganado!";
+    [SerializeField] string winMessage = "¡Felicidades ganador!";
     [SerializeField] string loseMessage = "¡Has perdido!";
 
     private float remaining;
