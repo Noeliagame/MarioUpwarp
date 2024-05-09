@@ -203,7 +203,6 @@ GameObject:
   - component: {fileID: 328386153}
   - component: {fileID: 328386152}
   - component: {fileID: 328386151}
-  - component: {fileID: 328386155}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -295,25 +294,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &328386155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 328386150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ca5321836ce39f41bc238de2788c723, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  min: 0
-  seg: 30
-  timeText: {fileID: 657088349}
-  messageText: {fileID: 891325519}
-  endPoint: {fileID: 520314507}
-  winMessage: "\xA1Felicidades, has ganado!"
-  loseMessage: "\xA1Has perdido!"
 --- !u!1001 &336646610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -499,7 +479,7 @@ GameObject:
   - component: {fileID: 520314509}
   - component: {fileID: 520314508}
   m_Layer: 0
-  m_Name: nube-15
+  m_Name: EndPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -950,7 +930,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.05882353, g: 0.6666667, b: 0.3019608, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1562,6 +1542,7 @@ GameObject:
   - component: {fileID: 1895418157}
   - component: {fileID: 1895418159}
   - component: {fileID: 1895418158}
+  - component: {fileID: 1895418160}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -1726,6 +1707,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 8
   jumpSpeed: 12
+--- !u!114 &1895418160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895418151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca5321836ce39f41bc238de2788c723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  min: 0
+  seg: 30
+  timeText: {fileID: 657088349}
+  messageText: {fileID: 891325519}
+  endPoint: {fileID: 520314507}
+  winMessage: "\xA1Felicidades, has ganado!"
+  loseMessage: "\xA1Has perdido!"
 --- !u!1 &1925406747
 GameObject:
   m_ObjectHideFlags: 0
