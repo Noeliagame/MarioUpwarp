@@ -17,6 +17,7 @@ public class TimeController : MonoBehaviour
     [SerializeField] string winMessage = "¡Felicidades ganador!";
     [SerializeField] string loseMessage = "¡Has perdido!";
 
+    public PausaManager pausaM;
     private float remaining;
     private bool timing;
 
@@ -29,6 +30,11 @@ public class TimeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (pausaM.enPausa == true)
+        {
+            return;
+        }
+
         if (timing)
         {
             remaining -= Time.deltaTime;

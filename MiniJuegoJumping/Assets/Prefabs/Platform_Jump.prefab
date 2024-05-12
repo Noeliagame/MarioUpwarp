@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4363198082916841087}
   - component: {fileID: 1624355849392318840}
   - component: {fileID: -7079228194847743634}
-  - component: {fileID: 6875374354549196513}
+  - component: {fileID: -1958829930621131348}
   m_Layer: 0
   m_Name: Platform_Jump
   m_TagString: Player
@@ -131,7 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6875374354549196513
+--- !u!114 &-1958829930621131348
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,8 +140,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5960945369696824364}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5854d86d047b3bc43837943afcb2a75a, type: 3}
+  m_Script: {fileID: 11500000, guid: d4639f187178d064c96557fea73a2b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDistance: 6
-  moveSpeed: 8

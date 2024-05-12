@@ -9,6 +9,7 @@ public class MarioMovement : MonoBehaviour
 
     private Rigidbody2D Rigidbody2D;
     private Animator Animator;
+    public PausaManager pausaM;    
     private float Horizontal;
     private float Vertical;
     private bool Grounded;
@@ -23,6 +24,11 @@ public class MarioMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       if(pausaM.enPausa == true)
+        {
+            return;
+        }
+       
         Horizontal = Input.GetAxisRaw("Horizontal");
         Vertical = Input.GetAxisRaw("Vertical");
 
