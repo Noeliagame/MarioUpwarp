@@ -2089,7 +2089,7 @@ MonoBehaviour:
   seg: 30
   timeText: {fileID: 657088349}
   messageText: {fileID: 891325519}
-  endPoint: {fileID: 0}
+  endPoint: {fileID: 520314507}
   winMessage: "\xA1Felicidades Ganador!"
   loseMessage: "\xA1Has Perdido!"
   pausaM: {fileID: 1015670498}
