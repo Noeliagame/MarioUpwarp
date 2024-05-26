@@ -6,13 +6,16 @@ public class MarioMovement : MonoBehaviour
 {
     public float Speed;
     public float JumpForce;
-
+   
     private Rigidbody2D Rigidbody2D;
     private Animator Animator;
     public PausaManager pausaM;    
     private float Horizontal;
     private float Vertical;
     private bool Grounded;
+
+
+    public GameObject JumpSound;
         
     // Start is called before the first frame update
     void Start()
@@ -51,6 +54,7 @@ public class MarioMovement : MonoBehaviour
     private void Jump()
     {
         Rigidbody2D.AddForce(Vector2.up * JumpForce);
+        Instantiate(JumpSound);
     }
     private void FixedUpdate()
     {
