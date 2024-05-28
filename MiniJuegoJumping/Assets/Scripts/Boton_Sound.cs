@@ -7,6 +7,7 @@ public class Boton_Sound : MonoBehaviour
 {
     public AudioSource source { get { return GetComponent<AudioSource>(); } }
     public Button Btn { get { return GetComponent<Button>(); } }
+
     public AudioClip BotonSound;
     void Start()
     {
