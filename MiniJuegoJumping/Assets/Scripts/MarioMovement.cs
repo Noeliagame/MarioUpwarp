@@ -29,6 +29,12 @@ public class MarioMovement : MonoBehaviour
     {
        if(pausaM.enPausa == true)
         {
+            AudioSource[] audios = FindObjectsOfType<AudioSource>();
+
+            foreach(AudioSource a in audios)
+            {
+                a.Pause();
+            }
             return;
         }
        
